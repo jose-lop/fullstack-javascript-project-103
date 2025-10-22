@@ -1,0 +1,18 @@
+{
+  "name": "@hexlet/code",
+  "version": "1.0.0",
+  "description": "Compares two configuration files and shows a difference.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "gendiff": "./gendiff.js"
+  },
+  "author": "jose",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^10.0.1"
+  }
+}
