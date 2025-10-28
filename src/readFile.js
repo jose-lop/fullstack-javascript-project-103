@@ -1,4 +1,6 @@
-  import fs from 'fs';
+/* eslint-env node */
+
+import fs from 'fs';
 import path from 'path';
 
 // 🧩 Función que lee un archivo JSON y devuelve su contenido como objeto

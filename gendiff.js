@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import { Command } from 'commander';
-import readFile from './src/readFile.js';
+import genDiff from './src/genDiff.js'; // 👈 importamos la función
 
 const program = new Command();
 
@@ -12,12 +12,9 @@ program
   .argument('<filepath1>', 'path to first file')
   .argument('<filepath2>', 'path to second file')
   .option('-f, --format <type>', 'output format', 'stylish')
-  .action((filepath1, filepath2, options) => {
-    const data1 = readFile(filepath1);
-    const data2 = readFile(filepath2);
-
-    console.log('📁 Contenido del primer archivo:', data1);
-    console.log('📁 Contenido del segundo archivo:', data2);
+  .action((filepath1, filepath2) => {
+    const diff = genDiff(filepath1, filepath2); // 🧩 aquí la usamos
+    console.log(diff);
   });
 
 program.parse();
