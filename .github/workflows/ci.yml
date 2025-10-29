@@ -31,7 +31,7 @@ jobs:
 
       - name: 📤 Enviar cobertura a Code Climate
         env:
-          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
+          CODECLIMATE_REPO_TOKEN: ${{ secrets.CODECLIMATE_REPO_TOKEN }}
         run: |
           npm install -g codeclimate-test-reporter
           codeclimate-test-reporter < coverage/lcov.info
