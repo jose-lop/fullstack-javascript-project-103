@@ -26,6 +26,12 @@ jobs:
       - name: 🔍 Ejecutar ESLint
         run: make lint
 
-      - name: 🧪 Ejecutar pruebas
-        run: npm test
+      - name: 🧪 Ejecutar pruebas con cobertura
+        run: npm test -- --coverage
 
+      - name: 📤 Enviar cobertura a Code Climate
+        env:
+          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
+        run: |
+          npm install -g codeclimate-test-reporter
+          codeclimate-test-reporter < coverage/lcov.info
