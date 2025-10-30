@@ -26,6 +26,10 @@ Proyecto de práctica del curso **Hexlet**: configuración de **linters**, **pru
 
 [![asciicast](https://asciinema.org/a/cXb6ehFK0R3F26ADW3GEYVkRG.svg)](https://asciinema.org/a/cXb6ehFK0R3F26ADW3GEYVkRG)
 
+## 🎥 Demostración de uso
+
+[![asciicast](https://asciinema.org/a/Qddj0wRnHIvX07gzj0qy6vEAj.svg)](https://asciinema.org/a/Qddj0wRnHIvX07gzj0qy6vEAj)
+
 ---
 
 ## ⚙️ Instalación
