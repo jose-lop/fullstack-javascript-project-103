@@ -2,7 +2,6 @@
 import path from 'path';
 import _ from 'lodash';
 import parse from './parsers.js'; // 👈 Importamos nuestro parser
-import fs from 'fs';
 
 const genDiff = (filepath1, filepath2) => {
   // Obtenemos las rutas absolutas
