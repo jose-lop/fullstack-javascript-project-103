@@ -1,7 +1,7 @@
 import { fileURLToPath } from 'url';
 import path, { dirname } from 'path';
 import { readFileSync } from 'fs';
-import genDiff from '../src/genDiff.js';
+import genDiff from '../src/gendiff.js';
 
 // Configurar __dirname para módulos ES
 const __filename = fileURLToPath(import.meta.url);
@@ -17,5 +17,6 @@ test('Comparación de archivos YAML planos', () => {
   const expected = readFile('expected.txt').trim();
 
   const result = genDiff(filepath1, filepath2);
-  expect(result).toBe(expected);
+  expect(result).toEqual(expected);
+
 });
