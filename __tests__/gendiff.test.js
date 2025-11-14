@@ -1,7 +1,7 @@
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import fs from 'fs';
-import genDiff from '../src/gendiff.js';
+import gendiff from './src/gendiff.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -17,7 +17,7 @@ test('gendiff stylish', () => {
   const file2 = getFixturePath('file2.json');
 
   const expected = readFixture('expected_stylish.txt').trim();
-  const result = genDiff(file1, file2, 'stylish').trim();
+  const result = gendiff(file1, file2, 'stylish').trim();
 
   expect(result).toBe(expected);
 });

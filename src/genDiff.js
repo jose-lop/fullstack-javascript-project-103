@@ -11,11 +11,11 @@ const getData = (filepath) =>
 const getExt = (filepath) => path.extname(filepath).slice(1);
 
 
-const genDiff = (file1, file2, formatName = 'stylish') => {
+const gendiff = (file1, file2, formatName = 'stylish') => {
   const data1 = parse(getData(file1), getExt(file1));
   const data2 = parse(getData(file2), getExt(file2));
   const diff = buildDiff(data1, data2);
   return format(diff, formatName);
 };
 
-export default genDiff;
+export default gendiff;
