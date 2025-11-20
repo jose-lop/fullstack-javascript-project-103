@@ -9,7 +9,7 @@
     "lint": "npx eslint ."
   },
   "bin": {
-    "gendiff": "./gendiff-cli.js"
+    "gendiff": "./bin/gendiff.js"
   },
   "author": "jose",
   "license": "ISC",

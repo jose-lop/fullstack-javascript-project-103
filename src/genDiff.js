@@ -7,9 +7,7 @@ import format from './formatters/index.js';
 const getData = (filepath) =>
   fs.readFileSync(path.resolve(filepath), 'utf-8');
 
-
 const getExt = (filepath) => path.extname(filepath).slice(1);
-
 
 const gendiff = (file1, file2, formatName = 'stylish') => {
   const data1 = parse(getData(file1), getExt(file1));

@@ -1,7 +1,8 @@
 import { fileURLToPath } from 'url';
 import path, { dirname } from 'path';
 import { readFileSync } from 'fs';
-import gendiff from './src/gendiff.js';
+import gendiff from '../src/gendiff.js';
+
 
 // Configurar __dirname para módulos ES
 const __filename = fileURLToPath(import.meta.url);
