@@ -1,8 +1,7 @@
-const stringify = (value) => {
-  if (value === null) {
-    return 'null';
-  }
-  if (typeof value === 'object') {
+import _ from 'lodash';
+
+const formatValue = (value) => {
+  if (_.isPlainObject(value) || Array.isArray(value)) {
     return '[complex value]';
   }
   if (typeof value === 'string') {
@@ -11,29 +10,32 @@ const stringify = (value) => {
   return String(value);
 };
 
-const plain = (tree) => {
-  const iter = (nodes, path) => nodes
-    .flatMap((node) => {
-      const currentPath = [...path, node.key].join('.');
+const plain = (tree, parent = '') => {
+  const lines = tree.flatMap((node) => {
+    const property = parent ? `${parent}.${node.key}` : node.key;
 
-      switch (node.type) {
-        case 'added':
-          return `Property '${currentPath}' was added with value: ${stringify(node.value)}`;
-        case 'removed':
-          return `Property '${currentPath}' was removed`;
-        case 'updated':
-          return `Property '${currentPath}' was updated. From ${stringify(node.oldValue)} to ${stringify(node.newValue)}`;
-        case 'nested':
-          return iter(node.children, [...path, node.key]);
-        case 'unchanged':
-          return [];
-        default:
-          throw new Error(`Unknown type: ${node.type}`);
-      }
-    })
-    .join('\n');
+    switch (node.type) {
+      case 'added':
+        return `Property '${property}' was added with value: ${formatValue(node.value)}`;
 
-  return iter(tree, []);
+      case 'removed':
+        return `Property '${property}' was removed`;
+
+      case 'changed':
+        return `Property '${property}' was updated. From ${formatValue(node.value1)} to ${formatValue(node.value2)}`;
+
+      case 'nested':
+        return plain(node.children, property);
+
+      case 'unchanged':
+        return [];
+
+      default:
+        throw new Error(`Unknown type: ${node.type}`);
+    }
+  });
+
+  return lines.join('\n');
 };
 
 export default plain;

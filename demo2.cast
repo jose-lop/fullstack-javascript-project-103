@@ -1,0 +1,12 @@
+{"version": 2, "width": 170, "height": 20, "timestamp": 1763632539, "env": {"SHELL": "/bin/bash", "TERM": "xterm-256color"}}
+[0.418493, "o", "\u001b[?2004h\u001b[1;34mfullstack-javascript-project-103\u001b[0m$ "]
+[15.444417, "o", "\u001b[7mgendiff __fixtures__/file1.yaml __fixtures__/file2.yaml\u001b[27m"]
+[17.46371, "o", "\r\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[Cgendiff __fixtures__/file1.yaml __fixtures__/file2.yaml\r\n\u001b[?2004l\r"]
+[18.368783, "o", "{\r\n  - follow: false\r\n    host: hexlet.io\r\n  - proxy: 123.234.53.22\r\n  - timeout: 50\r\n  + timeout: 20\r\n  + verbose: true\r\n}\r\n"]
+[18.384811, "o", "\u001b[?2004h\u001b[1;34mfullstack-javascript-project-103\u001b[0m$ "]
+[25.173138, "o", "e"]
+[25.613003, "o", "x"]
+[25.839061, "o", "i"]
+[26.181074, "o", "t"]
+[27.114562, "o", "\r\n\u001b[?2004l\r"]
+[27.114696, "o", "exit\r\n"]
