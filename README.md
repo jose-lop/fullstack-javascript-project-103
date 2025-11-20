@@ -134,3 +134,82 @@ toñito — Estudiante de programación Full Stack
 ## 📄 Licencia
 
 MIT
+📘 Gendiff – Comparador de archivos
+Un proyecto del curso Full Stack JavaScript de Hexlet
+📝 Descripción
+
+Gendiff es una herramienta de línea de comandos que compara dos archivos y muestra la diferencia en distintos formatos.
+Permite comparar archivos en formato JSON, YAML y YML.
+
+Este proyecto implementa:
+
+🔹 Parser de archivos
+
+🔹 Generación de árbol de diferencias
+
+🔹 Formato stylish
+
+🔹 Formato plain
+
+🔹 Formato json
+
+🔹 Pruebas automatizadas con Jest
+
+🚀 Instalación
+
+Clona el repositorio:
+
+git clone https://github.com/<tu-usuario>/fullstack-javascript-project-103.git
+cd fullstack-javascript-project-103
+
+
+Instala dependencias:
+
+npm install
+
+
+Instala el paquete globalmente:
+
+npm link
+
+🖥 Uso
+📄 Formato por defecto (stylish)
+gendiff file1.json file2.json
+
+📄 Formato plain
+gendiff -f plain file1.json file2.json
+
+📄 Formato JSON
+gendiff -f json file1.json file2.json
+
+🧪 Pruebas
+
+Ejecuta:
+
+npm test
+
+🎥 Demostración (asciinema)
+
+👉 https://asciinema.org/a/xcpv3xjssvOaH0xL3O4IHc1iE
+
+✔ Estado del proyecto
+
+
+
+
+📂 Estructura
+├── bin
+│   └── gendiff.js
+├── src
+│   ├── parser.js
+│   ├── buildTree.js
+│   ├── index.js
+│   └── formatters
+│       ├── stylish.js
+│       ├── plain.js
+│       └── json.js
+└── __tests__
+
+📎 Licencia
+
+Este proyecto se distribuye bajo la licencia MIT.
