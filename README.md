@@ -213,3 +213,17 @@ npm test
 📎 Licencia
 
 Este proyecto se distribuye bajo la licencia MIT.
+
+## Ejemplo — salida JSON
+
+Ejecuta:
+
+```bash
+gendiff --format json filepath1.json filepath2.json
+
+{
+  "host": { "type": "unchanged", "value": "hexlet.io" },
+  "timeout": { "type": "changed", "oldValue": 50, "newValue": 20 }
+}
+
+https://asciinema.org/a/o3SDy5MyVJ3SN2IDY1CegX7b2
