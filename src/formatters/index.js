@@ -1,6 +1,6 @@
 import stylish from './stylish.js';
 import plain from './plain.js';
-import json from './json.js'; // si ya lo tienes o lo agregarás
+import json from './json.js'; // si ya lo tienes o lo agregarás ok
 
 export default (diff, formatName) => {
   switch (formatName) {
