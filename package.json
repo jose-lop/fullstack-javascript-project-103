@@ -2,7 +2,7 @@
   "name": "@hexlet/code",
   "version": "1.0.0",
   "description": "Compares two configuration files and shows a difference.",
-  "main": "index.js",
+  "main": "code/index.js",
   "type": "module",
   "scripts": {
     "test": "NODE_OPTIONS=--experimental-vm-modules jest",
@@ -19,9 +19,7 @@
     "lodash": "^4.17.21"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3.3.1",
-    "@eslint/js": "^9.38.0",
-    "eslint": "^8.46.0",
+    "eslint": "^8.57.1",
     "eslint-plugin-jest": "^29.0.1",
     "eslint-plugin-node": "^11.1.0",
     "globals": "^16.4.0",
