@@ -1,2 +1,4 @@
 // code/index.js
-export { default } from '../src/gendiff.js';
+import gendiff from '../src/gendiff.js';
+
+export default gendiff;

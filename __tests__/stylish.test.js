@@ -3,13 +3,11 @@ import { dirname, join } from 'path';
 import fs from 'fs';
 import gendiff from '../src/gendiff.js';
 
-
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const getFixturePath = (name) => join(__dirname, '..', '__fixtures__', name);
-const readFile = (name) =>
-  fs.readFileSync(getFixturePath(name), 'utf-8');
+const readFile = (name) => fs.readFileSync(getFixturePath(name), 'utf-8');
 
 test('gendiff stylish json nested', () => {
   const file1 = getFixturePath('file1.json');

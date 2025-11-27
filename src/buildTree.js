@@ -1,5 +1,3 @@
-//1(ESTUDIADO) este archivo es el corazón del proyecto ❤️: es el que detecta las diferencias entre dos archivos.
-
 import _ from 'lodash';
 
 const buildDiff = (data1, data2) => {
@@ -22,7 +20,9 @@ const buildDiff = (data1, data2) => {
     }
 
     if (!_.isEqual(value1, value2)) {
-      return { key, type: 'changed', value1, value2 };
+      return {
+        key, type: 'changed', value1, value2,
+      };
     }
 
     return { key, type: 'unchanged', value: value1 };

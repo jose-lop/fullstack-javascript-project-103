@@ -7,7 +7,9 @@ const stringify = (value) => {
 
 const iter = (tree, path) => {
   const lines = tree.flatMap((node) => {
-    const { key, type, value, value1, value2, children } = node;
+    const {
+      key, type, value, value1, value2, children,
+    } = node;
     const property = path ? `${path}.${key}` : key;
 
     switch (type) {

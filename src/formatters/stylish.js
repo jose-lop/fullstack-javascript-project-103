@@ -1,8 +1,6 @@
-const makeIndent = (depth, spacesCount = 4) =>
-  ' '.repeat(depth * spacesCount - 2);
+const makeIndent = (depth, spacesCount = 4) => ' '.repeat(depth * spacesCount - 2);
 
-const makeBracketIndent = (depth, spacesCount = 4) =>
-  ' '.repeat(depth * spacesCount - spacesCount);
+const makeBracketIndent = (depth, spacesCount = 4) => ' '.repeat(depth * spacesCount - spacesCount);
 
 const stringify = (value, depth) => {
   if (typeof value !== 'object' || value === null) {
