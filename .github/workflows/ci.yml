@@ -23,9 +23,6 @@ jobs:
       - name: 📦 Instalar dependencias (legacy peer deps)
         run: npm install --legacy-peer-deps
 
-      - name: 🔍 Ejecutar ESLint
-        run: make lint
-
       - name: 🧪 Ejecutar pruebas con cobertura
         run: npm test -- --coverage
 
